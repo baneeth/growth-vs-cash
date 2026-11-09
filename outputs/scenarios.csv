@@ -1,0 +1,10 @@
+scenario,min_cash_pence,closing_cash_pence,profit_pence,breach,assumptions
+Base,17213227,17213227,-26833802,True,{}
+Upside,29223578,29223578,-14816567,False,"{""growth"": 18, ""collection"": 0.12}"
+Downside,532073,532073,-42385518,True,"{""growth"": 5, ""collection"": -0.15}"
+Hire now + launch,-24786773,-24786773,-68833802,True,"{""hire_delay"": 0, ""launch"": true}"
+Delay hires 6 months,-8286773,-8286773,-52333802,True,"{""hire_delay"": 6, ""launch"": true}"
+Collections,18557842,18557842,-26833802,True,"{""collection"": 0.15}"
+Price +5%,22522219,22522219,-20918353,False,"{""price"": 0.05}"
+Marketing -20%,25229227,25229227,-18817802,False,"{""expense_cut"": 0.2}"
+Combined staged,6449641,6449641,-38402353,True,"{""collection"": 0.15, ""price"": 0.05, ""expense_cut"": 0.2, ""hire_delay"": 6, ""launch"": true}"

@@ -1,0 +1,9 @@
+table,record,issue,exposure_pence,action,resolution
+invoices,I000000,duplicate,45000,Quarantine duplicate; otherwise verify against signed invoice or bank evidence,Confirmed duplicate
+payments,P000000,duplicate,45000,Quarantine duplicate; otherwise verify against signed invoice or bank evidence,Confirmed duplicate
+invoices,I000001,relationship,45000,Quarantine duplicate; otherwise verify against signed invoice or bank evidence,Investigate
+invoices,I000002,period,45000,Quarantine duplicate; otherwise verify against signed invoice or bank evidence,Investigate
+bank,B000000,unmatched,45000,Quarantine duplicate; otherwise verify against signed invoice or bank evidence,Investigate
+bank,B_UNKNOWN,unmatched,123450,Quarantine duplicate; otherwise verify against signed invoice or bank evidence,Investigate
+payments,P000000,bank_mismatch,45000,Quarantine duplicate; otherwise verify against signed invoice or bank evidence,Investigate
+payments,P000001,bank_mismatch,45000,Quarantine duplicate; otherwise verify against signed invoice or bank evidence,Investigate

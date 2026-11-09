@@ -1,0 +1,224 @@
+[
+  {
+    "table": "customers",
+    "url": "https://database-sample-website.s3.eu-north-1.amazonaws.com/datasets/subscription-billing/v3/csv/customers.csv",
+    "access_date": "2026-11-08",
+    "sha256": "cf4f65611763fee7ed70b64f5be0d65744789ccdf335959d2ae9319d5dfb839f",
+    "rows": 200,
+    "schema": {
+      "id": "int64",
+      "full_name": "object",
+      "email": "object",
+      "signup_date": "object",
+      "status": "object"
+    },
+    "dates": {
+      "signup_date": {
+        "min": "2020-01-12",
+        "max": "2023-12-24"
+      }
+    },
+    "sample": [
+      {
+        "id": 1,
+        "full_name": "Tomas Meyer",
+        "email": "tomas.meyer@example.org",
+        "signup_date": "2023-06-23",
+        "status": "active"
+      },
+      {
+        "id": 2,
+        "full_name": "Nadia Ali",
+        "email": "nadia.ali@example.net",
+        "signup_date": "2020-08-03",
+        "status": "active"
+      },
+      {
+        "id": 3,
+        "full_name": "Carla Sousa",
+        "email": "carla.sousa@example.net",
+        "signup_date": "2023-06-25",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "table": "plans",
+    "url": "https://database-sample-website.s3.eu-north-1.amazonaws.com/datasets/subscription-billing/v3/csv/plans.csv",
+    "access_date": "2026-11-08",
+    "sha256": "a66e5e2dd78553b612b4158c54b3ee1b09f1f2a46b62842ab81258e068ec4e15",
+    "rows": 10,
+    "schema": {
+      "id": "int64",
+      "plan_name": "object",
+      "monthly_price": "float64",
+      "features": "object"
+    },
+    "dates": {},
+    "sample": [
+      {
+        "id": 1,
+        "plan_name": "integrated trial",
+        "monthly_price": 86.52,
+        "features": "Flagged as unusual. Support replaced the session."
+      },
+      {
+        "id": 2,
+        "plan_name": "team business",
+        "monthly_price": 86.47,
+        "features": "The account owner asked for a change and the item was closed."
+      },
+      {
+        "id": 3,
+        "plan_name": "tailored professional",
+        "monthly_price": 87.9,
+        "features": "The supplier asked for a change and the refund was rescheduled."
+      }
+    ]
+  },
+  {
+    "table": "subscriptions",
+    "url": "https://database-sample-website.s3.eu-north-1.amazonaws.com/datasets/subscription-billing/v3/csv/subscriptions.csv",
+    "access_date": "2026-11-08",
+    "sha256": "f59217be33ad55bf163c7c08fe2562c7cc275078e9625c9c7dc2a9ba95a7c936",
+    "rows": 300,
+    "schema": {
+      "id": "int64",
+      "customer_id": "int64",
+      "plan_id": "int64",
+      "start_date": "object",
+      "status": "object",
+      "renewal_date": "object",
+      "cancellation_date": "object"
+    },
+    "dates": {
+      "start_date": {
+        "min": "2020-01-05",
+        "max": "2023-12-26"
+      },
+      "renewal_date": {
+        "min": "2020-01-03",
+        "max": "2023-12-29"
+      },
+      "cancellation_date": {
+        "min": "2020-01-12",
+        "max": "2023-12-13"
+      }
+    },
+    "sample": [
+      {
+        "id": 1,
+        "customer_id": 73,
+        "plan_id": 10,
+        "start_date": "2022-09-07",
+        "status": "cancelled",
+        "renewal_date": "2022-08-10",
+        "cancellation_date": "2020-05-30"
+      },
+      {
+        "id": 2,
+        "customer_id": 128,
+        "plan_id": 1,
+        "start_date": "2023-03-30",
+        "status": "cancelled",
+        "renewal_date": "2022-12-15",
+        "cancellation_date": "2023-11-22"
+      },
+      {
+        "id": 3,
+        "customer_id": 180,
+        "plan_id": 5,
+        "start_date": "2023-08-27",
+        "status": "cancelled",
+        "renewal_date": "2020-11-11",
+        "cancellation_date": "2020-10-29"
+      }
+    ]
+  },
+  {
+    "table": "invoices",
+    "url": "https://database-sample-website.s3.eu-north-1.amazonaws.com/datasets/subscription-billing/v3/csv/invoices.csv",
+    "access_date": "2026-11-08",
+    "sha256": "9e8acd48c3f187d66c3af14533d8b5a1a6f06a010daf0a6f4152a57b117a31dc",
+    "rows": 400,
+    "schema": {
+      "id": "int64",
+      "subscription_id": "int64",
+      "amount": "float64",
+      "issue_date": "object",
+      "status": "object"
+    },
+    "dates": {
+      "issue_date": {
+        "min": "2020-01-10",
+        "max": "2023-12-31"
+      }
+    },
+    "sample": [
+      {
+        "id": 1,
+        "subscription_id": 224,
+        "amount": 30.02,
+        "issue_date": "2021-07-12",
+        "status": "pending"
+      },
+      {
+        "id": 2,
+        "subscription_id": 114,
+        "amount": 10.24,
+        "issue_date": "2021-01-31",
+        "status": "paid"
+      },
+      {
+        "id": 3,
+        "subscription_id": 130,
+        "amount": 5.36,
+        "issue_date": "2023-12-23",
+        "status": "paid"
+      }
+    ]
+  },
+  {
+    "table": "payments",
+    "url": "https://database-sample-website.s3.eu-north-1.amazonaws.com/datasets/subscription-billing/v3/csv/payments.csv",
+    "access_date": "2026-11-08",
+    "sha256": "8cfb127ae808bd798e0b917c3b985c0eed6374f072ec327de4ba8e281de1af0a",
+    "rows": 500,
+    "schema": {
+      "id": "int64",
+      "invoice_id": "int64",
+      "payment_date": "object",
+      "amount": "float64",
+      "status": "object"
+    },
+    "dates": {
+      "payment_date": {
+        "min": "2020-01-09 09:05:04",
+        "max": "2023-12-31 18:50:14"
+      }
+    },
+    "sample": [
+      {
+        "id": 1,
+        "invoice_id": 260,
+        "payment_date": "2023-08-03 10:28:55",
+        "amount": 24.98,
+        "status": "successful"
+      },
+      {
+        "id": 2,
+        "invoice_id": 338,
+        "payment_date": "2023-11-15 11:33:22",
+        "amount": 5.82,
+        "status": "successful"
+      },
+      {
+        "id": 3,
+        "invoice_id": 299,
+        "payment_date": "2022-09-05 11:41:31",
+        "amount": 22.78,
+        "status": "successful"
+      }
+    ]
+  }
+]

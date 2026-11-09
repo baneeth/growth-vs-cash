@@ -1,0 +1,5 @@
+{
+  "apptest": "All five pages and scenario input mutation exercised by pytest",
+  "server_health": true,
+  "screenshot": true
+}

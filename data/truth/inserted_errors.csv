@@ -1,0 +1,9 @@
+table,record,issue
+invoices,I000000,duplicate
+payments,P000000,duplicate
+invoices,I000001,relationship
+invoices,I000002,period
+bank,B000000,unmatched
+payments,P000000,bank_mismatch
+payments,P000001,bank_mismatch
+bank,B_UNKNOWN,unmatched

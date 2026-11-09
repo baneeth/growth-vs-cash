@@ -1,0 +1,203 @@
+{
+  "checks": {
+    "journal_imbalance_pence": 0,
+    "trial_balance_pence": 0,
+    "ar_rollforward_max_pence": 0,
+    "deferred_rollforward_max_pence": 0,
+    "profit_cash_bridge_max_pence": 0,
+    "clean_exceptions": 0,
+    "inserted_issues": 8,
+    "detected_issues": 8,
+    "true_positives": 8,
+    "precision": 1.0,
+    "recall": 1.0,
+    "excel_snapshot_checked": true
+  },
+  "source_audit": {
+    "currency": "Unspecified; never assigned GBP",
+    "counts": {
+      "customers": 200,
+      "plans": 10,
+      "subscriptions": 300,
+      "invoices": 400,
+      "payments": 500
+    },
+    "cancellation_before_start": 44,
+    "renewal_before_start": 176,
+    "invoice_before_subscription": 220,
+    "successful_amount_mismatch": 400,
+    "failed_or_other_attempts": 131,
+    "subscriptions_customer_id_orphans": 0,
+    "subscriptions_plan_id_orphans": 0,
+    "invoices_subscription_id_orphans": 0,
+    "payments_invoice_id_orphans": 0,
+    "payment_before_invoice": 273
+  },
+  "first_month": {
+    "month": "2025-01-01",
+    "revenue_pence": 8089000,
+    "cost_pence": 13195000,
+    "profit_pence": -5106000,
+    "margin": -0.631227593,
+    "invoiced_pence": 28983000,
+    "receipts_pence": 12613000,
+    "refunds_pence": 5000,
+    "payments_pence": 12600000,
+    "cash_pence": 140013000,
+    "ar_pence": 16370000,
+    "overdue_pence": 0,
+    "deferred_pence": 20889000,
+    "ap_pence": 600000,
+    "active_customers": 230,
+    "mrr_pence": 8094000,
+    "churn": null,
+    "collections_rate": 0.4351861436,
+    "cash_bridge_pence": 13000,
+    "cash_change_pence": 13000,
+    "ar_check_pence": 0,
+    "deferred_check_pence": 0
+  },
+  "last_month": {
+    "month": "2026-09-01",
+    "revenue_pence": 15691250,
+    "cost_pence": 19614000,
+    "profit_pence": -3922750,
+    "margin": -0.2499960169,
+    "invoiced_pence": 13537000,
+    "receipts_pence": 12785000,
+    "refunds_pence": 5750,
+    "payments_pence": 19619750,
+    "cash_pence": 29925150,
+    "ar_pence": 34797000,
+    "overdue_pence": 21260000,
+    "deferred_pence": 20389500,
+    "ap_pence": 600000,
+    "active_customers": 456,
+    "mrr_pence": 15697000,
+    "churn": 0.0065934066,
+    "collections_rate": 0.9444485484,
+    "cash_bridge_pence": -6834750,
+    "cash_change_pence": -6834750,
+    "ar_check_pence": 0,
+    "deferred_check_pence": 0
+  },
+  "scenarios": [
+    {
+      "scenario": "Base",
+      "min_cash_pence": 17213227,
+      "closing_cash_pence": 17213227,
+      "profit_pence": -26833802,
+      "breach": true,
+      "assumptions": "{}"
+    },
+    {
+      "scenario": "Upside",
+      "min_cash_pence": 29223578,
+      "closing_cash_pence": 29223578,
+      "profit_pence": -14816567,
+      "breach": false,
+      "assumptions": "{\"growth\": 18, \"collection\": 0.12}"
+    },
+    {
+      "scenario": "Downside",
+      "min_cash_pence": 532073,
+      "closing_cash_pence": 532073,
+      "profit_pence": -42385518,
+      "breach": true,
+      "assumptions": "{\"growth\": 5, \"collection\": -0.15}"
+    },
+    {
+      "scenario": "Hire now + launch",
+      "min_cash_pence": -24786773,
+      "closing_cash_pence": -24786773,
+      "profit_pence": -68833802,
+      "breach": true,
+      "assumptions": "{\"hire_delay\": 0, \"launch\": true}"
+    },
+    {
+      "scenario": "Delay hires 6 months",
+      "min_cash_pence": -8286773,
+      "closing_cash_pence": -8286773,
+      "profit_pence": -52333802,
+      "breach": true,
+      "assumptions": "{\"hire_delay\": 6, \"launch\": true}"
+    },
+    {
+      "scenario": "Collections",
+      "min_cash_pence": 18557842,
+      "closing_cash_pence": 18557842,
+      "profit_pence": -26833802,
+      "breach": true,
+      "assumptions": "{\"collection\": 0.15}"
+    },
+    {
+      "scenario": "Price +5%",
+      "min_cash_pence": 22522219,
+      "closing_cash_pence": 22522219,
+      "profit_pence": -20918353,
+      "breach": false,
+      "assumptions": "{\"price\": 0.05}"
+    },
+    {
+      "scenario": "Marketing -20%",
+      "min_cash_pence": 25229227,
+      "closing_cash_pence": 25229227,
+      "profit_pence": -18817802,
+      "breach": false,
+      "assumptions": "{\"expense_cut\": 0.2}"
+    },
+    {
+      "scenario": "Combined staged",
+      "min_cash_pence": 6449641,
+      "closing_cash_pence": 6449641,
+      "profit_pence": -38402353,
+      "breach": true,
+      "assumptions": "{\"collection\": 0.15, \"price\": 0.05, \"expense_cut\": 0.2, \"hire_delay\": 6, \"launch\": true}"
+    }
+  ],
+  "holdout_metrics": [
+    {
+      "metric": "revenue_pence",
+      "model": "driver",
+      "mae_pence": 520957.3333333333,
+      "bias_pence": 520957.3333333333,
+      "wape": 0.0334354235
+    },
+    {
+      "metric": "revenue_pence",
+      "model": "naive",
+      "mae_pence": 296000.0,
+      "bias_pence": -296000.0,
+      "wape": 0.018997497
+    },
+    {
+      "metric": "receipts_pence",
+      "model": "driver",
+      "mae_pence": 10601075.333333334,
+      "bias_pence": 10601075.333333334,
+      "wape": 0.8002824862
+    },
+    {
+      "metric": "receipts_pence",
+      "model": "naive",
+      "mae_pence": 4977333.333333333,
+      "bias_pence": 4977333.333333333,
+      "wape": 0.3757423251
+    },
+    {
+      "metric": "cash_pence",
+      "model": "driver",
+      "mae_pence": 28509628.0,
+      "bias_pence": 28509628.0,
+      "wape": 0.7819465539
+    },
+    {
+      "metric": "cash_pence",
+      "model": "naive",
+      "mae_pence": 12317333.333333334,
+      "bias_pence": 12317333.333333334,
+      "wape": 0.3378331122
+    }
+  ],
+  "weekly_min_cash_pence": 28797799
+}

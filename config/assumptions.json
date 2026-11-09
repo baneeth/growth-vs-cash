@@ -1,0 +1,20 @@
+{
+  "seed": 4127,
+  "company": "CedarCloud Workflow",
+  "currency": "GBP",
+  "start": "2025-01-01",
+  "months": 21,
+  "customers": 500,
+  "opening_cash_pence": 140000000,
+  "minimum_cash_pence": 20000000,
+  "monthly_prices_pence": [15000, 45000, 100000],
+  "annual_discount": 0.1,
+  "annual_share": 0.3,
+  "monthly_churn": 0.008,
+  "new_customers_per_month": 12,
+  "hire_monthly_cost_pence": 550000,
+  "proposed_hires": 5,
+  "launch_cost_pence": 9000000,
+  "budget_frozen": "2024-12-15",
+  "holdout_cutoff": "2026-06-30"
+}

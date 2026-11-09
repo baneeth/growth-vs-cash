@@ -1,0 +1,20 @@
+{
+  "currency": "Unspecified; never assigned GBP",
+  "counts": {
+    "customers": 200,
+    "plans": 10,
+    "subscriptions": 300,
+    "invoices": 400,
+    "payments": 500
+  },
+  "cancellation_before_start": 44,
+  "renewal_before_start": 176,
+  "invoice_before_subscription": 220,
+  "successful_amount_mismatch": 400,
+  "failed_or_other_attempts": 131,
+  "subscriptions_customer_id_orphans": 0,
+  "subscriptions_plan_id_orphans": 0,
+  "invoices_subscription_id_orphans": 0,
+  "payments_invoice_id_orphans": 0,
+  "payment_before_invoice": 273
+}
